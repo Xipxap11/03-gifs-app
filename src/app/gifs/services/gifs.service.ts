@@ -9,7 +9,7 @@ export class GifsService {
 
   public gifsList: Gif[]=[];
   private _tagsHistory: string[] = []
-  private apiKey: string = 'Wt8bOf9i0H35Ve3ip9Tbhwmsy6ABPbCp';
+  private apiKey: string = 'JISbJP92VPq36wddCf9XJZ2OTv7CehnZ';
   private serviceUrl: string = 'http://api.giphy.com/v1/gifs';
 
   constructor(private http: HttpClient) {
@@ -51,7 +51,7 @@ export class GifsService {
 
     this.organizeHistory(tag)
     const params = new HttpParams()
-      .set("api_key", "Wt8bOf9i0H35Ve3ip9Tbhwmsy6ABPbCp")
+      .set("api_key", "JISbJP92VPq36wddCf9XJZ2OTv7CehnZ")
       .set("q", tag)
       .set("limit", '10')
 
@@ -59,7 +59,7 @@ export class GifsService {
       .subscribe((resp) => {
         this.gifsList=resp.data;
       })
-    // const resp = await fetch('http://api.giphy.com/v1/gifs/search?api_key=Wt8bOf9i0H35Ve3ip9Tbhwmsy6ABPbCp&q=valorant&limit=10');
+    // const resp = await fetch('http://api.giphy.com/v1/gifs/search?api_key=JISbJP92VPq36wddCf9XJZ2OTv7CehnZ&q=valorant&limit=10');
 
   }
 
